@@ -1,0 +1,1629 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Rooms - LibSpace</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-pages.css" />:
+  <link rel="stylesheet" href="navbar-footer.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <div class="navbar-logo-icon">
+            <img src="favicon.svg" alt="Logo" />
+            
+          </div>
+          <span class="navbar-logo-text">LibSpace</span>
+          <span class="badge badge-primary navbar-badge">KKU Library</span>
+        </a>
+
+        <div class="navbar-links">
+          <a href="index.html" class="navbar-link">Home</a>
+          <a href="rooms.html" class="navbar-link active">Rooms</a>
+          <a href="my-bookings.html" class="navbar-link">My Bookings</a>
+          <a href="#" class="navbar-link">About</a>
+          <a href="#" class="navbar-link">Contact</a>
+          <a href="#" class="navbar-link">FAQ</a>
+        </div>
+
+        <div class="navbar-actions">
+          <a href="admin.html" class="navbar-admin-btn">Admin</a>
+        </div>
+
+        <button class="navbar-menu-btn" aria-label="Toggle menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="container">
+          <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-menu-link">Home</a>
+            <a href="rooms.html" class="mobile-menu-link  active">Rooms</a>
+            <a href="my-bookings.html" class="mobile-menu-link">My Bookings</a>
+            <a href="#" class="mobile-menu-link">About</a>
+            <a href="#" class="mobile-menu-link">Contact</a>
+            <a href="#" class="mobile-menu-link">FAQ</a>
+            <a href="admin.html" class="mobile-menu-link">Admin</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="rooms-header">
+        <div class="container">
+          <h1 class="rooms-header-title">All Rooms</h1>
+          <p class="rooms-header-desc">Browse and book conference rooms at KKU Library</p>
+        </div>
+      </section>
+
+      <div class="rooms-page">
+        <div class="container">
+          <div class="rooms-layout">
+            <!-- Sidebar (Desktop) -->
+            <aside class="rooms-sidebar">
+              <div class="rooms-sidebar-content">
+                <h3 class="rooms-sidebar-title">Filters</h3>
+
+                <!-- Search -->
+                <div class="sidebar-filter-group">
+                  <label class="sidebar-filter-label">Search</label>
+                  <div class="search-input-wrapper" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+                    <svg
+                      class="search-input-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Room name..." />
+                  </div>
+                </div>
+
+                <!-- Capacity -->
+                <div class="sidebar-filter-group">
+                  <label class="sidebar-filter-label">Capacity</label>
+                  <div class="sidebar-filter-options">
+                    <button class="sidebar-filter-btn active" data-type="capacity" data-value="all">All</button>
+                    <button class="sidebar-filter-btn" data-type="capacity" data-value="1-3 people">1-3 people</button>
+                    <button class="sidebar-filter-btn" data-type="capacity" data-value="4-6 people">4-6 people</button>
+                    <button class="sidebar-filter-btn" data-type="capacity" data-value="7-10 people">7-10 people</button>
+                    <button class="sidebar-filter-btn" data-type="capacity" data-value="11-14 people">11-14 people</button>
+                    <button class="sidebar-filter-btn" data-type="capacity" data-value="15+ people">15+ people</button>
+                  </div>
+                </div>
+
+                <!-- Floor -->
+                <div class="sidebar-filter-group">
+                  <label class="sidebar-filter-label">Floor</label>
+                  <div class="sidebar-filter-options">
+                    <button class="sidebar-filter-btn active" data-type="floor" data-value="all">All</button>
+                    <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 1">Floor 1</button>
+                    <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 2">Floor 2</button>
+                    <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 3">Floor 3</button>
+                    <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 4">Floor 4</button>
+                    <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 5">Floor 5</button>
+                  </div>
+                </div>
+
+                <!-- Facilities -->
+                <div class="sidebar-filter-group">
+                  <label class="sidebar-filter-label">Facilities</label>
+                  <div class="sidebar-filter-options">
+                    <button class="sidebar-filter-btn active" data-type="facilities" data-value="all">All</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Projector">Projector</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Whiteboard">Whiteboard</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="WiFi">WiFi</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Air Conditioner">Air Conditioner</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Monitor">Monitor</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Video Conference">Video Conference</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Microphone">Microphone</button>
+                    <button class="sidebar-filter-btn" data-type="facilities" data-value="Dual Monitors">Dual Monitors</button>
+                  </div>
+                </div>
+
+                <!-- Clear Filters -->
+                <button class="sidebar-clear-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                  Clear all filters
+                </button>
+              </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="rooms-main">
+              <!-- Mobile Filter Bar -->
+              <div class="mobile-filter-bar">
+                <span class="mobile-filter-count">Showing 8 rooms</span>
+                <button class="filter-btn mobile-filter-open">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                  </svg>
+                  Filters
+                </button>
+              </div>
+
+              <!-- Desktop Results Count -->
+              <p class="desktop-results-count">Showing 8 rooms</p>
+
+              <!-- No Rooms Found -->
+              <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-state-content">
+                  <svg class="empty-state-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                  <h3 class="empty-state-title">No rooms found</h3>
+                  <p class="empty-state-desc">Try adjusting your filters or search criteria</p>
+                  <button class="btn-primary" id="emptyStateClearBtn">Clear Filters</button>
+                </div>
+              </div>
+
+              <!-- Room Grid -->
+              <div class="room-grid">
+                <!-- Room Card 1 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Study Room A1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Study Room A1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        1-3 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 1
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                          />
+                          <polygon points="12 15 17 21 7 21 12 15" />
+                        </svg>
+                        Projector
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="12" x="2" y="6" rx="2" />
+                        </svg>
+                        Whiteboard
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+2 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Meeting Room B2"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Meeting Room B2</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        4-6 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 4
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                          />
+                          <polygon points="12 15 17 21 7 21 12 15" />
+                        </svg>
+                        Projector
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        Video Conference
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+2 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Collaboration Space C1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Collaboration Space C1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        11-14 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 5
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                          />
+                          <polygon points="12 15 17 21 7 21 12 15" />
+                        </svg>
+                        Projector
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="12" x="2" y="6" rx="2" />
+                        </svg>
+                        Whiteboard
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+5 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 4 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Quiet Study D1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Quiet Study D1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        1-3 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 2
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="12" x="2" y="6" rx="2" />
+                        </svg>
+                        Whiteboard
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="1" />
+                          <path d="M12 1v6m0 6v6" />
+                          <path d="M4.22 4.22l4.24 4.24m5.08 0l4.24-4.24" />
+                          <path d="M1 12h6m6 0h6" />
+                          <path d="M4.22 19.78l4.24-4.24m5.08 0l4.24 4.24" />
+                        </svg>
+                        WiFi
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+1 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 5 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/3182826/pexels-photo-3182826.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Seminar Room E1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Seminar Room E1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        15+ capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 5
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                          />
+                          <polygon points="12 15 17 21 7 21 12 15" />
+                        </svg>
+                        Projector
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                          <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                          <line x1="12" x2="12" y1="19" y2="22" />
+                        </svg>
+                        Microphone
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+6 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 6 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Group Study F1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Group Study F1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        7-10 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 3
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                          <path d="M16 3H8a2 2 0 0 0-2 2v4h12V5a2 2 0 0 0-2-2z" />
+                        </svg>
+                        TV Screen
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="12" x="2" y="6" rx="2" />
+                        </svg>
+                        Whiteboard
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+3 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 7 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Private Pod G1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Private Pod G1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        1-3 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 2
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="14" height="10" x="5" y="7" rx="1" />
+                          <path d="M2 17h20" />
+                        </svg>
+                        Monitor
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="1" />
+                          <path d="M4.93 4.93a24 24 0 0 0 0 34.14M19.07 4.93a24 24 0 0 1 0 34.14M1.07 12a22 22 0 0 1 21.86 0M3.14 21.07a22 22 0 0 0 17.72 0" />
+                        </svg>
+                        WiFi
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+1 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Room Card 8 -->
+                <div class="room-card animate-fade-in-up">
+                  <div class="room-card-image-wrapper">
+                    <img
+                      src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="Workshop Room H1"
+                      class="room-card-image"
+                    />
+                    <div class="room-card-image-overlay"></div>
+                    <span class="room-card-available-badge">
+                      <span class="pulse-dot"></span>
+                      Available
+                    </span>
+                    <span class="room-card-name">Workshop Room H1</span>
+                  </div>
+                  <div class="room-card-content">
+                    <div class="room-card-info">
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        7-10 capacity
+                      </span>
+                      <span class="room-card-info-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                          <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                          <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                          <path d="M10 6h4" />
+                          <path d="M10 10h4" />
+                          <path d="M10 14h4" />
+                          <path d="M10 18h4" />
+                        </svg>
+                        Floor 4
+                      </span>
+                    </div>
+                    <div class="room-card-facilities">
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"
+                          />
+                          <polygon points="12 15 17 21 7 21 12 15" />
+                        </svg>
+                        Projector
+                      </span>
+                      <span class="facility-tag">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <rect width="20" height="12" x="2" y="6" rx="2" />
+                        </svg>
+                        Whiteboard
+                      </span>
+                      <span class="facility-tag">
+                        <span class="facility-more">+2 more</span>
+                      </span>
+                    </div>
+                    <div class="room-card-actions">
+                      <a href="room-detail.html" class="btn-ghost">View Details</a>
+                      <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Filter Modal -->
+      <div class="mobile-filter-modal">
+        <div class="mobile-filter-overlay"></div>
+        <div class="mobile-filter-content">
+          <div class="mobile-filter-header">
+            <h3 class="mobile-filter-title">Filters</h3>
+            <button class="mobile-filter-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Search -->
+          <div class="sidebar-filter-group">
+            <label class="sidebar-filter-label">Search</label>
+            <div class="search-input-wrapper">
+              <svg
+                class="search-input-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+              <input type="text" class="search-input" placeholder="Room name..." />
+            </div>
+          </div>
+
+          <!-- Capacity -->
+          <div class="sidebar-filter-group">
+            <label class="sidebar-filter-label">Capacity</label>
+            <div class="sidebar-filter-options">
+              <button class="sidebar-filter-btn active" data-type="capacity" data-value="all">All</button>
+              <button class="sidebar-filter-btn" data-type="capacity" data-value="1-3 people">1-3 people</button>
+              <button class="sidebar-filter-btn" data-type="capacity" data-value="4-6 people">4-6 people</button>
+              <button class="sidebar-filter-btn" data-type="capacity" data-value="7-10 people">7-10 people</button>
+              <button class="sidebar-filter-btn" data-type="capacity" data-value="11-14 people">11-14 people</button>
+              <button class="sidebar-filter-btn" data-type="capacity" data-value="15+ people">15+ people</button>
+            </div>
+          </div>
+
+          <!-- Floor -->
+          <div class="sidebar-filter-group">
+            <label class="sidebar-filter-label">Floor</label>
+            <div class="sidebar-filter-options">
+              <button class="sidebar-filter-btn active" data-type="floor" data-value="all">All</button>
+              <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 1">Floor 1</button>
+              <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 2">Floor 2</button>
+              <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 3">Floor 3</button>
+              <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 4">Floor 4</button>
+              <button class="sidebar-filter-btn" data-type="floor" data-value="Floor 5">Floor 5</button>
+            </div>
+          </div>
+
+          <!-- Facilities -->
+          <div class="sidebar-filter-group">
+            <label class="sidebar-filter-label">Facilities</label>
+            <div class="sidebar-filter-options">
+              <button class="sidebar-filter-btn active" data-type="facilities" data-value="all">All</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Projector">Projector</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Whiteboard">Whiteboard</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="WiFi">WiFi</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Air Conditioner">Air Conditioner</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Monitor">Monitor</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Video Conference">Video Conference</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Microphone">Microphone</button>
+              <button class="sidebar-filter-btn" data-type="facilities" data-value="Dual Monitors">Dual Monitors</button>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem">
+            <button class="sidebar-clear-btn" style="flex: 1">Clear All</button>
+            <button class="btn-primary mobile-filter-close" style="flex: 1">Apply Filters</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="navbar-logo">
+              <div class="navbar-logo-icon">
+                <img src="favicon.svg" alt="Logo" />
+              </div>
+              <span class="navbar-logo-text">LibSpace</span>
+            </a>
+            <p class="footer-brand-desc">
+              Book conference rooms and meeting spaces at KKU Library. Fast, easy, and convenient room reservations for students and faculty.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <div class="footer-links">
+              <a href="rooms.html" class="footer-link">Browse Rooms</a>
+              <a href="my-bookings.html" class="footer-link">My Bookings</a>
+              <a href="#" class="footer-link">About Us</a>
+              <a href="#" class="footer-link">FAQ</a>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Contact</h4>
+            <div class="footer-contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>KKU Library, Khon Kaen University<br />123 Mittraphap Road, Khon Kaen 40002</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <span>043-202-222</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span>library@kku.ac.th</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Operating Hours</h4>
+            <div class="footer-contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span><strong>Mon - Fri</strong><br />08:00 - 22:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span><strong>Sat - Sun</strong><br />09:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2025 LibSpace - KKU Library Room Booking. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    // ============================================================================
+    // Mobile Menu Toggle
+    // ============================================================================
+    function initMobileMenu() {
+      const menuBtn = document.querySelector(".navbar-menu-btn");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("open");
+          const isOpen = mobileMenu.classList.contains("open");
+          menuBtn.innerHTML = isOpen
+            ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>'
+            : '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>';
+        });
+      }
+    }
+
+    // ============================================================================
+    // Room Data
+    // ============================================================================
+    const allRoomsData = [
+      { name: "Study Room A1", capacity: 2, floor: 1, facilities: ["Projector", "Whiteboard", "WiFi", "Air Conditioner"], image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Meeting Room B2", capacity: 5, floor: 4, facilities: ["Projector", "Video Conference", "Whiteboard", "WiFi"], image: "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Collaboration Space C1", capacity: 12, floor: 5, facilities: ["Projector", "Whiteboard", "TV Screen", "Air Conditioner", "WiFi", "Microphone", "Video Conference", "Dual Monitors"], image: "https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Quiet Study D1", capacity: 2, floor: 2, facilities: ["Whiteboard", "WiFi", "Air Conditioner"], image: "https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Seminar Room E1", capacity: 20, floor: 5, facilities: ["Projector", "Microphone", "Sound System", "Video Conference", "TV Screen", "Whiteboard", "WiFi", "Air Conditioner"], image: "https://images.pexels.com/photos/3182826/pexels-photo-3182826.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Group Study F1", capacity: 8, floor: 3, facilities: ["TV Screen", "Whiteboard", "WiFi", "Air Conditioner", "Projector"], image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Private Pod G1", capacity: 3, floor: 2, facilities: ["Monitor", "WiFi", "Air Conditioner"], image: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { name: "Workshop Room H1", capacity: 10, floor: 4, facilities: ["Projector", "Whiteboard", "Video Conference", "TV Screen"], image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" }
+    ];
+
+    // ============================================================================
+    // Filter System
+    // ============================================================================
+    function initFilterSystem() {
+      const openBtn = document.querySelector(".mobile-filter-open");
+      const closeBtns = document.querySelectorAll(".mobile-filter-close");
+      const modal = document.querySelector(".mobile-filter-modal");
+      const overlay = document.querySelector(".mobile-filter-overlay");
+      const clearBtns = document.querySelectorAll(".sidebar-clear-btn");
+
+      // Hide clear buttons initially
+      clearBtns.forEach(btn => {
+        if (btn) btn.style.display = "none";
+      });
+
+      // Mobile modal toggle
+      if (openBtn && modal) {
+        openBtn.addEventListener("click", () => {
+          modal.classList.add("open");
+          document.body.style.overflow = "hidden";
+        });
+      }
+
+      const closeModal = () => {
+        if (modal) {
+          modal.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+      };
+
+      closeBtns.forEach(btn => btn.addEventListener("click", closeModal));
+      if (overlay) overlay.addEventListener("click", closeModal);
+
+      // Check if any filter is active
+      const isAnyFilterActive = () => {
+        const allBtns = document.querySelectorAll(".sidebar-filter-btn");
+        for (let btn of allBtns) {
+          if (btn.dataset.value !== "all" && btn.classList.contains("active")) {
+            return true;
+          }
+        }
+        
+        const searchInputs = document.querySelectorAll(".search-input");
+        for (let input of searchInputs) {
+          if (input && input.value.trim()) {
+            return true;
+          }
+        }
+        
+        return false;
+      };
+
+      // Update clear button visibility
+      const updateClearButtonVisibility = () => {
+        const hasActive = isAnyFilterActive();
+        clearBtns.forEach(btn => {
+          if (btn) btn.style.display = hasActive ? "" : "none";
+        });
+      };
+
+      // Handle filter button clicks
+      const allFilterBtns = document.querySelectorAll(".sidebar-filter-btn");
+      allFilterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const type = btn.dataset.type;
+          const value = btn.dataset.value;
+          
+          if (!type || !value) {
+            console.warn("Button missing data attributes:", btn);
+            return;
+          }
+
+          // Find all buttons with the same type and value (desktop + mobile)
+          const matchingBtns = document.querySelectorAll(
+            `.sidebar-filter-btn[data-type="${type}"][data-value="${value}"]`
+          );
+
+          if (type === "facilities") {
+            // Facilities: multiple selection with AND logic
+            if (value === "all") {
+              // Deselect all others, activate "All"
+              const allFacilityBtns = document.querySelectorAll('[data-type="facilities"]');
+              allFacilityBtns.forEach(b => b.classList.remove("active"));
+              matchingBtns.forEach(b => b.classList.add("active"));
+            } else {
+              // Toggle this facility
+              const isActive = btn.classList.contains("active");
+              matchingBtns.forEach(b => b.classList.toggle("active", !isActive));
+              
+              // Remove "All" if any specific facility is selected
+              const allBtns = document.querySelectorAll('[data-type="facilities"][data-value="all"]');
+              if (!isActive) {
+                allBtns.forEach(b => b.classList.remove("active"));
+              }
+              
+              // If nothing is selected, activate "All"
+              const anyFacilityActive = Array.from(document.querySelectorAll('[data-type="facilities"]:not([data-value="all"])'))
+                .some(b => b.classList.contains("active"));
+              if (!anyFacilityActive) {
+                allBtns.forEach(b => b.classList.add("active"));
+              }
+            }
+          } else {
+            // Capacity and Floor: single selection
+            // Deselect all in this type
+            const sameTypeBtns = document.querySelectorAll(`[data-type="${type}"]`);
+            sameTypeBtns.forEach(b => b.classList.remove("active"));
+            
+            // Activate selected
+            matchingBtns.forEach(b => b.classList.add("active"));
+          }
+
+          updateClearButtonVisibility();
+          filterRoomsOnPage();
+        });
+      });
+
+      // Search input with sync
+      const searchInputs = document.querySelectorAll(".search-input");
+      searchInputs.forEach(searchInput => {
+        if (searchInput) {
+          let searchTimeout;
+          searchInput.addEventListener("input", () => {
+            clearTimeout(searchTimeout);
+            
+            // Sync all search inputs
+            const value = searchInput.value;
+            searchInputs.forEach(input => {
+              if (input !== searchInput) {
+                input.value = value;
+              }
+            });
+            
+            updateClearButtonVisibility();
+            searchTimeout = setTimeout(filterRoomsOnPage, 300);
+          });
+        }
+      });
+
+      // Clear filters
+      clearBtns.forEach(clearBtn => {
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            // Reset all filters to "All"
+            const allBtns = document.querySelectorAll(".sidebar-filter-btn");
+            allBtns.forEach(btn => {
+              if (btn.dataset.value === "all") {
+                btn.classList.add("active");
+              } else {
+                btn.classList.remove("active");
+              }
+            });
+            
+            // Clear all search inputs
+            searchInputs.forEach(input => {
+              if (input) input.value = "";
+            });
+            
+            updateClearButtonVisibility();
+            filterRoomsOnPage();
+          });
+        }
+      });
+
+      // Empty state clear button
+      const emptyStateClearBtn = document.querySelector("#emptyStateClearBtn");
+      if (emptyStateClearBtn) {
+        emptyStateClearBtn.addEventListener("click", () => {
+          if (clearBtns[0]) clearBtns[0].click();
+        });
+      }
+    }
+
+    // ============================================================================
+    // Filter & Render Rooms
+    // ============================================================================
+    function filterRoomsOnPage() {
+      const roomGrid = document.querySelector(".room-grid");
+      if (!roomGrid) return;
+
+      // Get active filters
+      let selectedCapacity = "all";
+      let selectedFloor = "all";
+      let selectedFacilities = [];
+
+      // Get capacity (check first active button only)
+      const capacityBtn = document.querySelector('[data-type="capacity"].active');
+      if (capacityBtn) selectedCapacity = capacityBtn.dataset.value;
+
+      // Get floor
+      const floorBtn = document.querySelector('[data-type="floor"].active');
+      if (floorBtn) selectedFloor = floorBtn.dataset.value;
+
+      // Get facilities
+      const facilityBtns = document.querySelectorAll('[data-type="facilities"].active');
+      const hasAllFacilities = Array.from(facilityBtns).some(b => b.dataset.value === "all");
+      
+      if (!hasAllFacilities) {
+        selectedFacilities = Array.from(new Set(
+          Array.from(facilityBtns).map(b => b.dataset.value)
+        ));
+      }
+
+      // Get search term
+      const searchInput = document.querySelector(".search-input");
+      const searchTerm = (searchInput?.value || "").toLowerCase();
+
+      // Filter rooms
+      const filtered = allRoomsData.filter(room => {
+        // Search filter
+        if (searchTerm) {
+          const matchesName = room.name.toLowerCase().includes(searchTerm);
+          const matchesFacility = room.facilities.some(f => f.toLowerCase().includes(searchTerm));
+          if (!matchesName && !matchesFacility) return false;
+        }
+
+        // Capacity filter
+        if (selectedCapacity !== "all") {
+          const cap = getCapacityCategory(room.capacity);
+          if (cap !== selectedCapacity) return false;
+        }
+
+        // Floor filter
+        if (selectedFloor !== "all") {
+          if (`Floor ${room.floor}` !== selectedFloor) return false;
+        }
+
+        // Facilities filter (AND logic)
+        if (selectedFacilities.length > 0) {
+          for (const facility of selectedFacilities) {
+            if (!room.facilities.includes(facility)) return false;
+          }
+        }
+
+        return true;
+      });
+
+      // Update count
+      const resultsCount = document.querySelector(".desktop-results-count");
+      const mobileCount = document.querySelector(".mobile-filter-count");
+      const countText = `Showing ${filtered.length} room${filtered.length !== 1 ? 's' : ''}`;
+      if (resultsCount) resultsCount.textContent = countText;
+      if (mobileCount) mobileCount.textContent = countText;
+
+      // Handle empty state
+      const emptyState = document.querySelector(".empty-state");
+      if (filtered.length === 0) {
+        if (emptyState) emptyState.style.display = "";
+        if (roomGrid) roomGrid.style.display = "none";
+      } else {
+        if (emptyState) emptyState.style.display = "none";
+        if (roomGrid) roomGrid.style.display = "";
+      }
+
+      // Render
+      renderRoomsGrid(filtered, roomGrid);
+    }
+
+    function getCapacityCategory(capacity) {
+      if (capacity >= 1 && capacity <= 3) return "1-3 people";
+      if (capacity >= 4 && capacity <= 6) return "4-6 people";
+      if (capacity >= 7 && capacity <= 10) return "7-10 people";
+      if (capacity >= 11 && capacity <= 14) return "11-14 people";
+      if (capacity >= 15) return "15+ people";
+      return "all";
+    }
+
+    function renderRoomsGrid(rooms, container) {
+      container.innerHTML = "";
+
+      rooms.forEach((room) => {
+        const card = document.createElement("div");
+        card.className = "room-card animate-fade-in-up";
+        const capacityCategory = getCapacityCategory(room.capacity);
+        const firstTwoFacilities = room.facilities.slice(0, 2);
+        const moreCount = room.facilities.length - 2;
+
+        let facilitiesHTML = firstTwoFacilities
+          .map(f => `<span class="facility-tag">${f}</span>`)
+          .join("");
+        
+        if (moreCount > 0) {
+          facilitiesHTML += `<span class="facility-tag"><span class="facility-more">+${moreCount} more</span></span>`;
+        }
+
+        card.innerHTML = `
+          <div class="room-card-image-wrapper">
+            <img src="${room.image}" alt="${room.name}" class="room-card-image" />
+            <div class="room-card-image-overlay"></div>
+            <span class="room-card-available-badge">
+              <span class="pulse-dot"></span>
+              Available
+            </span>
+            <span class="room-card-name">${room.name}</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-info">
+              <span class="room-card-info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                ${capacityCategory}
+              </span>
+              <span class="room-card-info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                  <path d="M10 6h4" />
+                  <path d="M10 10h4" />
+                  <path d="M10 14h4" />
+                  <path d="M10 18h4" />
+                </svg>
+                Floor ${room.floor}
+              </span>
+            </div>
+            <div class="room-card-facilities">
+              ${facilitiesHTML}
+            </div>
+            <div class="room-card-actions">
+              <a href="room-detail.html" class="btn-ghost">View Details</a>
+              <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // ============================================================================
+    // Initialize
+    // ============================================================================
+    document.addEventListener("DOMContentLoaded", () => {
+      initMobileMenu();
+      initFilterSystem();
+      filterRoomsOnPage();
+    });
+    </script>
+</body>
+</html>

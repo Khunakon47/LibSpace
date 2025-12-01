@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Room - LibSpace</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-pages.css">
+  </head>
+  <body>
+      <!-- Confetti Container -->
+      <div class="confetti-container"></div>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="navbar-logo">
+            <div class="navbar-logo-icon">
+              <img src="favicon.svg" alt="Logo" />
+              
+            </div>
+            <span class="navbar-logo-text">LibSpace</span>
+            <span class="badge badge-primary navbar-badge">KKU Library</span>
+          </a>
+
+          <div class="navbar-links">
+            <a href="index.html" class="navbar-link">Home</a>
+            <a href="rooms.html" class="navbar-link active">Rooms</a>
+            <a href="my-bookings.html" class="navbar-link">My Bookings</a>
+            <a href="#" class="navbar-link">About</a>
+            <a href="#" class="navbar-link">Contact</a>
+            <a href="#" class="navbar-link">FAQ</a>
+          </div>
+
+          <div class="navbar-actions">
+            <a href="admin.html" class="navbar-admin-btn">Admin</a>
+          </div>
+
+          <button class="navbar-menu-btn" aria-label="Toggle menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <div class="container">
+            <div class="mobile-menu-links">
+              <a href="index.html" class="mobile-menu-link">Home</a>
+              <a href="rooms.html" class="mobile-menu-link active">Rooms</a>
+              <a href="my-bookings.html" class="mobile-menu-link">My Bookings</a>
+              <a href="#" class="mobile-menu-link">About</a>
+              <a href="#" class="mobile-menu-link">Contact</a>
+              <a href="#" class="mobile-menu-link">FAQ</a>
+              <a href="admin.html" class="mobile-menu-link">Admin</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <div class="booking-page">
+          <div class="booking-container">
+            <a href="room-detail.html" class="back-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 19-7-7 7-7"/>
+                <path d="M19 12H5"/>
+              </svg>
+              Back to Study Room A1
+            </a>
+            <!-- Progress Steps -->
+            <div class="booking-progress">
+              <div class="booking-step active">
+                <div class="booking-step-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </div>
+                <span class="booking-step-label">Date</span>
+              </div>
+              <div class="booking-step-line"></div>
+              <div class="booking-step">
+                <div class="booking-step-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <span class="booking-step-label">Time</span>
+              </div>
+              <div class="booking-step-line"></div>
+              <div class="booking-step">
+                <div class="booking-step-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+                <span class="booking-step-label">Details</span>
+              </div>
+              <div class="booking-step-line"></div>
+              <div class="booking-step">
+                <div class="booking-step-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </div>
+                <span class="booking-step-label">Confirm</span>
+              </div>
+              <div class="booking-step-line"></div>
+              <div class="booking-step">
+                <div class="booking-step-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </div>
+                <span class="booking-step-label">Success</span>
+              </div>
+            </div>
+
+            <!-- Step 1: Date -->
+            <div class="step-content" id="step-1">
+              <div class="booking-card">
+                <h2 class="booking-card-title">Select Room & Date</h2>
+                <p class="booking-card-desc">Choose a room and pick your preferred date</p>
+
+                <!-- Room Selection -->
+                <div class="room-selection">
+                    <div class="room-selection-container">
+                        <div class="room-selection-icon">
+                            <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Study Room A1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.5rem;">
+                        </div>
+                        <div class="room-selection-info">
+                            <span class="room-selection-name">Study Room A1</span>
+                            <div class="room-selection-meta">
+                                <span class="room-selection-details">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    30 people
+                                </span>
+                                <span class="room-selection-details">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Floor 3
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                  <h3 style="font-size: 1rem; font-weight: 600; color: var(--foreground); margin-bottom: 1rem; margin-top: 1.5rem;">Select Date</h3>
+                  <div class="calendar-card" style="margin-bottom: 1.5rem; background-color: var(--muted);">
+                    <div class="calendar-header">
+                      <button class="calendar-nav-btn prev">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="m15 18-6-6 6-6" />
+                        </svg>
+                      </button>
+                      <span class="calendar-month">November 2025</span>
+                      <button class="calendar-nav-btn next">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="m9 18 6-6-6-6" />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="calendar-weekdays">
+                      <span class="calendar-weekday">Sun</span>
+                      <span class="calendar-weekday">Mon</span>
+                      <span class="calendar-weekday">Tue</span>
+                      <span class="calendar-weekday">Wed</span>
+                      <span class="calendar-weekday">Thu</span>
+                      <span class="calendar-weekday">Fri</span>
+                      <span class="calendar-weekday">Sat</span>
+                    </div>
+
+                    <div class="calendar-days">
+                      <!-- Days will be rendered dynamically by JavaScript -->
+                    </div>
+                  </div>
+
+                <!-- Calendar Legend -->
+                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 3px; background: rgba(16, 185, 129, 0.3); border: 1px solid rgb(16, 185, 129);"></div>
+                    <span style="font-size: 0.875rem; color: var(--muted-foreground);">Available</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 3px; background: rgba(251, 191, 36, 0.3); border: 1px solid rgb(251, 191, 36);"></div>
+                    <span style="font-size: 0.875rem; color: var(--muted-foreground);">Partially Booked</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 3px; background: rgba(239, 68, 68, 0.3); border: 1px solid rgb(239, 68, 68);"></div>
+                    <span style="font-size: 0.875rem; color: var(--muted-foreground);">Fully Booked</span>
+                  </div>
+                </div>
+
+                <!-- Selected Date Summary -->
+                  <div class="selection-summary">
+                    <span class="selection-summary-label">
+                      Selected: Sunday, November 30, 2025
+                    </span>
+                  </div>
+
+                <div class="booking-nav">
+                  <div></div>
+                  <button class="btn-primary btn-next-step">
+                    Continue
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Time -->
+            <div class="step-content hidden" id="step-2">
+              <div class="booking-card">
+                <h2 class="booking-card-title">Select Time Slots</h2>
+                <p class="booking-card-desc">Choose up to 3 consecutive hours for your booking</p>
+
+                <!-- Time Slots -->
+                <h3
+                  style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: var(--foreground);
+                    margin-bottom: 1rem;
+                  "
+                  id="time-slots-heading"
+                >
+                  Available Time Slots for Nov 28, 2025
+                </h3>
+
+                <div class="time-slots-grid">
+                  <button class="time-slot past" disabled>08:00</button>
+                  <button class="time-slot past" disabled>09:00</button>
+                  <button class="time-slot booked" disabled>10:00</button>
+                  <button class="time-slot booked" disabled>11:00</button>
+                  <button class="time-slot available">12:00</button>
+                  <button class="time-slot available">13:00</button>
+                  <button class="time-slot available">14:00</button>
+                  <button class="time-slot booked" disabled>15:00</button>
+                  <button class="time-slot available">16:00</button>
+                  <button class="time-slot available">17:00</button>
+                  <button class="time-slot available">18:00</button>
+                  <button class="time-slot available">19:00</button>
+                  <button class="time-slot available">20:00</button>
+                  <button class="time-slot available">21:00</button>
+                </div>
+
+                <div class="time-slots-legend">
+                  <div class="time-slots-legend-item">
+                    <span class="time-slots-legend-dot available"></span>
+                    <span>Available</span>
+                  </div>
+                  <div class="time-slots-legend-item">
+                    <span class="time-slots-legend-dot booked"></span>
+                    <span>Booked</span>
+                  </div>
+                  <div class="time-slots-legend-item">
+                    <span class="time-slots-legend-dot selected"></span>
+                    <span>Selected</span>
+                  </div>
+                  <div class="time-slots-legend-item">
+                    <span class="time-slots-legend-dot past"></span>
+                    <span>Past</span>
+                  </div>
+                </div>
+
+                <!-- Selection Summary (Hidden until slot is selected) -->
+                <div class="selection-summary" id="time-selection-summary" style="display: none; background: var(--muted); padding: 1.25rem; border-radius: 0.75rem; margin-top: 1.5rem;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+                    <div style="text-align: left;">
+                      <div style="font-size: 0.875rem; color: var(--foreground-muted); margin-bottom: 0.25rem;">Selected Time</div>
+                      <div style="font-size: 1.1rem; font-weight: 600; color: var(--foreground);">
+                        <span id="selected-time">18:00 - 19:00</span>
+                        <span style="color: var(--primary); font-size: 1rem; margin-left: 0.5rem;">(<span id="selected-duration">1 hour</span>)</span>
+                      </div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="font-size: 0.875rem; color: var(--foreground-muted); margin-bottom: 0.25rem;">Date</div>
+                      <div style="font-size: 1.1rem; font-weight: 600; color: var(--foreground);" id="selected-date-display">Dec 19, 2025</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="booking-nav">
+                  <button class="btn-ghost btn-prev-step">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m12 19-7-7 7-7" />
+                      <path d="M19 12H5" />
+                    </svg>
+                    Back
+                  </button>
+                  <button class="btn-primary btn-next-step" id="time-continue-btn" disabled style="opacity: 0.5; cursor: not-allowed;">
+                    Continue
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Details -->
+            <div class="step-content hidden" id="step-3">
+              <div class="booking-card">
+                <h2 class="booking-card-title">Your Details</h2>
+                <p class="booking-card-desc">Please fill in your booking information</p>
+
+                <!-- Selected Room Summary -->
+                <div class="selected-room-summary">
+                  <div>
+                    <div class="selected-room-name" id="step3-selected-date">Nov 30, 2025</div>
+                    <div class="selected-room-details">
+                      <span id="step3-selected-time">12:00 - 13:00 (1 hour)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-grid-2">
+                    <div>
+                      <label class="form-label">Full Name <span class="required">*</span></label>
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    <div>
+                      <label class="form-label"
+                        >Student/Staff ID <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="e.g., 6510110001"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div>
+                      <label class="form-label">Email <span class="required">*</span></label>
+                      <input
+                        type="email"
+                        class="input"
+                        placeholder="your.email@kku.ac.th"
+                      />
+                    </div>
+                    <div>
+                      <label class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="input"
+                        placeholder="e.g., 0812345678"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="form-label"
+                      >Room Type <span class="required">*</span></label
+                    >
+                    <select class="input">
+                      <option value="">Select room type</option>
+                      <option value="study">Study Room</option>
+                      <option value="meeting">Meeting Room</option>
+                      <option value="collaboration">Collaboration Space</option>
+                      <option value="seminar">Seminar Room</option>
+                      <option value="workshop">Workshop Room</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="form-label"
+                      >Purpose of Booking <span class="required">*</span></label
+                    >
+                    <select class="input">
+                      <option value="">Select purpose</option>
+                      <option value="study">Study Group</option>
+                      <option value="meeting">Meeting</option>
+                      <option value="presentation">Presentation Practice</option>
+                      <option value="project">Project Work</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="form-label"
+                      >Number of Attendees <span class="required">*</span></label
+                    >
+                    <select class="input">
+                      <option value="">Select number of attendees</option>
+                      <option value="1-2">1-2 people</option>
+                      <option value="3-4">3-4 people</option>
+                      <option value="5-6">5-6 people</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="form-label">Additional Notes</label>
+                    <textarea
+                      class="input"
+                      placeholder="Any special requirements or notes..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="booking-nav">
+                  <button class="btn-ghost btn-prev-step">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m12 19-7-7 7-7" />
+                      <path d="M19 12H5" />
+                    </svg>
+                    Back
+                  </button>
+                  <button class="btn-primary btn-next-step">
+                    Continue
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Confirm -->
+            <div class="step-content hidden" id="step-4">
+              <div class="booking-card">
+                <h2 class="booking-card-title">Confirm Your Booking</h2>
+                <p class="booking-card-desc">
+                  Please review your booking details before confirming
+                </p>
+
+                <div class="confirm-summary">
+                  <!-- Date & Time Info -->
+                  <div class="selected-room-summary" style="margin-bottom: 1rem">
+                    <div class="room-selection-icon" style="width: 80px; height: 80px; flex-shrink: 0;">
+                      <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Study Room A1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.5rem;">
+                    </div>
+                    <div>
+                      <div class="selected-room-name" id="step4-selected-date">Nov 28, 2025</div>
+                      <div class="selected-room-details">
+                        <span id="step4-selected-time">Friday, 13:00 - 15:00 (2 hours)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="confirm-summary-section">
+                    <div class="confirm-summary-item">
+                      <span class="confirm-summary-label">Room Type</span>
+                      <span class="confirm-summary-value" id="step4-room-type">Study Room</span>
+                    </div>
+                  </div>
+
+                  <div class="confirm-summary-divider">
+                    <div class="confirm-summary-section">
+                      <div class="confirm-summary-item">
+                        <span class="confirm-summary-label">Name</span>
+                        <span class="confirm-summary-value" id="step4-name">Somchai Thongdee</span>
+                      </div>
+                      <div class="confirm-summary-item">
+                        <span class="confirm-summary-label">Student ID</span>
+                        <span class="confirm-summary-value" id="step4-student-id">6510110123</span>
+                      </div>
+                      <div class="confirm-summary-item">
+                        <span class="confirm-summary-label">Email</span>
+                        <span class="confirm-summary-value" id="step4-email">somchai.t@kku.ac.th</span>
+                      </div>
+                      <div class="confirm-summary-item">
+                        <span class="confirm-summary-label">Phone</span>
+                        <span class="confirm-summary-value" id="step4-phone">081-234-5678</span>
+                      </div>
+                      <div class="confirm-summary-item">
+                        <span class="confirm-summary-label">Purpose</span>
+                        <span class="confirm-summary-value" id="step4-purpose">Group Study</span>
+                      </div>
+                      <div class="confirm-summary-item">
+                        <span class="confirm-summary-label">Attendees</span>
+                        <span class="confirm-summary-value" id="step4-attendees">3-4 people</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Agreement -->
+                <div
+                  style="
+                    margin-top: 1.5rem;
+                    padding: 1rem;
+                    background: var(--muted);
+                    border-radius: 0.5rem;
+                  "
+                >
+                  <label
+                    style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer"
+                  >
+                    <input type="checkbox" checked style="margin-top: 0.25rem" />
+                    <span
+                      style="
+                        font-size: 0.875rem;
+                        color: var(--foreground-secondary);
+                        line-height: 1.5;
+                      "
+                    >
+                      I agree to the
+                      <a href="#" style="color: var(--primary)">booking terms and conditions</a>. I
+                      understand that I must check-in within 15 minutes of my booking time or my
+                      reservation may be cancelled.
+                    </span>
+                  </label>
+                </div>
+
+                <div class="booking-nav">
+                  <button class="btn-ghost btn-prev-step">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m12 19-7-7 7-7" />
+                      <path d="M19 12H5" />
+                    </svg>
+                    Back
+                  </button>
+                  <button class="btn-primary btn-next-step">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    Confirm Booking
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Step 5: Success -->
+            <div class="step-content hidden" id="step-5">
+              <div class="success-page">
+                <div class="success-container">
+                  <!-- Success Icon -->
+                  <div class="success-icon">
+                    <div class="success-icon-inner">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <h1 class="success-title">Booking Confirmed!</h1>
+                  <p class="success-subtitle">
+                    Your room has been successfully reserved. A confirmation email has been sent to your
+                    inbox.
+                  </p>
+
+                  <!-- Booking Card -->
+                  <div class="success-card">
+                    <div class="success-card-header">
+                      <img
+                        id="step5-room-image"
+                        src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=100"
+                        alt="Study Room A1"
+                        class="success-card-image"
+                      />
+                      <div>
+                        <div class="success-card-room-name">Study Room A1</div>
+                        <div class="success-card-room-info">Central Library, Floor 3</div>
+                      </div>
+                    </div>
+
+                    <div class="success-card-details">
+                      <div class="success-card-row">
+                        <span class="success-card-label">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                            <line x1="16" x2="16" y1="2" y2="6" />
+                            <line x1="8" x2="8" y1="2" y2="6" />
+                            <line x1="3" x2="21" y1="10" y2="10" />
+                          </svg>
+                          Date
+                        </span>
+                        <span class="success-card-value" id="step5-date">Friday, November 28, 2025</span>
+                      </div>
+
+                      <div class="success-card-row">
+                        <span class="success-card-label">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          Time
+                        </span>
+                        <span class="success-card-value" id="step5-time">13:00 - 15:00</span>
+                      </div>
+
+                      <div class="success-card-row">
+                        <span class="success-card-label">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                          </svg>
+                          Duration
+                        </span>
+                        <span class="success-card-value" id="step5-duration">2 hours</span>
+                      </div>
+
+                      <div class="success-card-divider">
+                        <div class="success-card-row">
+                          <span class="success-card-label">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                              />
+                              <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            Booking ID
+                          </span>
+                          <span class="success-card-value highlight" id="step5-booking-id">BK-2025112801</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="success-actions">
+                    <button class="btn-ghost" onclick="window.print()">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="6 9 6 2 18 2 18 9" />
+                        <path
+                          d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+                        />
+                        <rect width="12" height="8" x="6" y="14" />
+                      </svg>
+                      Print Details
+                    </button>
+                    <a href="my-bookings.html" class="btn-primary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                      </svg>
+                      View My Bookings
+                    </a>
+                  </div>
+
+                  <!-- Reminders -->
+                  <div class="success-reminders">
+                    <h4 class="success-reminders-title">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="display: inline; vertical-align: middle; margin-right: 0.5rem"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" x2="12" y1="8" y2="12" />
+                        <line x1="12" x2="12.01" y1="16" y2="16" />
+                      </svg>
+                      Important Reminders
+                    </h4>
+                    <ul class="success-reminders-list">
+                      <li>Please arrive 5 minutes before your booking time</li>
+                      <li>Check-in at the library front desk upon arrival</li>
+                      <li>Cancellations must be made at least 2 hours in advance</li>
+                      <li>Please leave the room clean and tidy after use</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="index.html" class="navbar-logo">
+                <div class="navbar-logo-icon">
+                  <img src="favicon.svg" alt="Logo" />
+                </div>
+                <span class="navbar-logo-text">LibSpace</span>
+              </a>
+              <p class="footer-brand-desc">
+                Book conference rooms and meeting spaces at KKU Library. Fast, easy, and convenient room reservations for students and faculty.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="footer-title">Quick Links</h4>
+              <div class="footer-links">
+                <a href="rooms.html" class="footer-link">Browse Rooms</a>
+                <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">FAQ</a>
+                <a href="#" class="footer-link">Terms & Conditions</a>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="footer-title">Contact</h4>
+              <div class="footer-contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>KKU Library, Khon Kaen University<br />123 Mittraphap Road, Khon Kaen 40002</span>
+              </div>
+              <div class="footer-contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span>043-202-222</span>
+              </div>
+              <div class="footer-contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>library@kku.ac.th</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="footer-title">Operating Hours</h4>
+              <div class="footer-contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span><strong>Mon - Fri</strong><br />08:00 - 22:00</span>
+              </div>
+              <div class="footer-contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span><strong>Sat - Sun</strong><br />09:00 - 18:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2025 LibSpace - KKU Library Room Booking. All rights reserved.</p>
+            <div class="footer-bottom-links">
+              <a href="#" class="footer-link">Terms</a>
+              <a href="#" class="footer-link">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+    
+    <script>
+      // ==========================================
+      // Calendar Date Picker for Booking Page (Real Data)
+      // ==========================================
+      
+      // Today's date: November 30, 2025
+      const TODAY = new Date(2025, 10, 30);
+      
+      // Sample booking data for 1 month from today
+      const bookingData = {
+        'November 2025': {
+          '2025-11-30': 'available'
+        },
+        'December 2025': {
+          '2025-12-01': 'available',
+          '2025-12-02': 'partial',
+          '2025-12-03': 'available',
+          '2025-12-04': 'booked',
+          '2025-12-05': 'available',
+          '2025-12-06': 'available',
+          '2025-12-07': 'partial',
+          '2025-12-08': 'available',
+          '2025-12-09': 'booked',
+          '2025-12-10': 'available',
+          '2025-12-11': 'available',
+          '2025-12-12': 'partial',
+          '2025-12-13': 'available',
+          '2025-12-14': 'available',
+          '2025-12-15': 'booked',
+          '2025-12-16': 'available',
+          '2025-12-17': 'partial',
+          '2025-12-18': 'available',
+          '2025-12-19': 'available',
+          '2025-12-20': 'available',
+          '2025-12-21': 'booked',
+          '2025-12-22': 'available',
+          '2025-12-23': 'partial',
+          '2025-12-24': 'available',
+          '2025-12-25': 'available',
+          '2025-12-26': 'available',
+          '2025-12-27': 'booked',
+          '2025-12-28': 'available',
+          '2025-12-29': 'available',
+          '2025-12-30': 'partial'
+        },
+        'January 2026': {
+          '2026-01-01': 'available',
+          '2026-01-02': 'available',
+          '2026-01-03': 'booked',
+          '2026-01-04': 'available',
+          '2026-01-05': 'partial'
+        }
+      };
+      
+      let currentDate = new Date(2025, 10, 30); // November 30, 2025
+      let selectedDate = null;
+      
+      // Format date for data key (YYYY-MM-DD)
+      function formatDateForKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      }
+      
+      // Format date for display
+      function formatDateForDisplay(date) {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+      }
+      
+      // Check if date is in the past (before today)
+      function isPastDate(date) {
+        const dateOnly = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        const todayOnly = new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate());
+        return dateOnly < todayOnly;
+      }
+      
+      // Get availability status for a date
+      function getAvailabilityStatus(date) {
+        // Past dates have no availability status
+        if (isPastDate(date)) {
+          return 'past';
+        }
+        
+        const monthKey = date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+        const dateKey = formatDateForKey(date);
+        
+        if (bookingData[monthKey] && bookingData[monthKey][dateKey]) {
+          return bookingData[monthKey][dateKey];
+        }
+        
+        return 'unavailable'; // Dates with no data are unavailable
+      }
+      
+      // Render calendar days
+      function renderCalendar() {
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+        
+        // Get first day of month and number of days
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        // Update month display
+        const monthName = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+        document.querySelector('.calendar-month').textContent = monthName;
+        
+        // Clear existing days
+        const daysContainer = document.querySelector('.calendar-days');
+        daysContainer.innerHTML = '';
+        
+        // Add empty cells for days before month starts
+        for (let i = 0; i < firstDay; i++) {
+          const emptyDay = document.createElement('div');
+          daysContainer.appendChild(emptyDay);
+        }
+        
+        // Add days of month
+        for (let day = 1; day <= daysInMonth; day++) {
+          const date = new Date(year, month, day);
+          const dayElement = document.createElement('button');
+          dayElement.className = 'calendar-day';
+          dayElement.textContent = day;
+          
+          const availability = getAvailabilityStatus(date);
+          const dateKey = formatDateForKey(date);
+          const isPast = isPastDate(date);
+          
+          // Add availability class
+          if (isPast) {
+            // Past dates - no background color, disabled
+            dayElement.classList.add('past');
+            dayElement.disabled = true;
+          } else {
+            // Future dates from today onwards - show status with background color
+            if (availability === 'available') {
+              dayElement.classList.add('available');
+            } else if (availability === 'partial') {
+              dayElement.classList.add('partial');
+            } else if (availability === 'booked') {
+              dayElement.classList.add('full');
+              dayElement.disabled = true;
+            } else {
+              dayElement.classList.add('unavailable');
+              dayElement.disabled = true;
+            }
+          }
+          
+          // Check if selected
+          if (selectedDate && formatDateForKey(selectedDate) === dateKey) {
+            dayElement.classList.add('selected');
+          }
+          
+          // Add click handler for available and partially booked days
+          if (!isPast && (availability === 'available' || availability === 'partial')) {
+            dayElement.addEventListener('click', function(e) {
+              e.preventDefault();
+              selectDate(date);
+            });
+          }
+          
+          daysContainer.appendChild(dayElement);
+        }
+      }
+      
+      // Select a date
+      function selectDate(date) {
+        selectedDate = date;
+        
+        // Update calendar UI
+        renderCalendar();
+        
+        // Update selection summary
+        const summaryLabel = document.querySelector('.selection-summary-label');
+        if (summaryLabel) {
+          summaryLabel.textContent = `Selected: ${formatDateForDisplay(date)}`;
+        }
+      }
+      
+      // Navigate months
+      function previousMonth() {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+      }
+      
+      function nextMonth() {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+      }
+      
+      // Initialize calendar
+      function initializeCalendar() {
+        // Set initial selected date as today (November 30, 2025)
+        selectedDate = new Date(TODAY);
+        
+        // Attach event listeners to navigation buttons
+        const prevBtn = document.querySelector('.calendar-nav-btn.prev');
+        const nextBtn = document.querySelector('.calendar-nav-btn.next');
+        
+        if (prevBtn) {
+          prevBtn.addEventListener('click', previousMonth);
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', nextMonth);
+        }
+        
+        // Render initial calendar
+        renderCalendar();
+      }
+      
+      // Initialize when DOM is loaded
+      document.addEventListener('DOMContentLoaded', initializeCalendar);
+      
+      // ==========================================
+      // Time Slot Selection Handler
+      // ==========================================
+      document.addEventListener('DOMContentLoaded', function() {
+        const timeSlots = document.querySelectorAll('.time-slot.available');
+        const selectionSummary = document.getElementById('time-selection-summary');
+        const continueBtn = document.getElementById('time-continue-btn');
+        const selectedTimeDisplay = document.getElementById('selected-time');
+        const selectedDurationDisplay = document.getElementById('selected-duration');
+        let selectedSlots = [];
+        let alertContainer = null;
+        
+        // Create alert container below navbar
+        function createAlertContainer() {
+          if (!alertContainer) {
+            alertContainer = document.createElement('div');
+            alertContainer.style.cssText = `
+              position: fixed;
+              top: 80px;
+              right: 20px;
+              z-index: 1000;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              max-width: 400px;
+            `;
+            document.body.appendChild(alertContainer);
+          }
+          return alertContainer;
+        }
+        
+        // Show alert notification
+        function showAlert(message) {
+          const container = createAlertContainer();
+          const alert = document.createElement('div');
+          alert.style.cssText = `
+            background: rgba(30, 30, 50, 0.95);
+            border-left: 4px solid rgb(251, 191, 36);
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 0.95rem;
+            animation: slideIn 0.3s ease-out;
+          `;
+          
+          const icon = document.createElement('span');
+          icon.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgb(251, 191, 36)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          `;
+          
+          const text = document.createElement('span');
+          text.textContent = message;
+          
+          const closeBtn = document.createElement('button');
+          closeBtn.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          `;
+          closeBtn.style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+          `;
+          closeBtn.addEventListener('click', function() {
+            alert.remove();
+          });
+          
+          alert.appendChild(icon);
+          alert.appendChild(text);
+          alert.appendChild(closeBtn);
+          container.appendChild(alert);
+          
+          // Auto remove after 4 seconds
+          setTimeout(() => {
+            alert.remove();
+          }, 4000);
+        }
+        
+        // Convert time string to hour number (e.g., "14:00" -> 14)
+        function timeToHour(timeStr) {
+          return parseInt(timeStr.split(':')[0]);
+        }
+        
+        // Check if selected slots are consecutive
+        function areConsecutive(slots) {
+          if (slots.length <= 1) return true;
+          
+          const hours = slots.map(timeToHour).sort((a, b) => a - b);
+          for (let i = 1; i < hours.length; i++) {
+            if (hours[i] !== hours[i - 1] + 1) {
+              return false;
+            }
+          }
+          return true;
+        }
+        
+        timeSlots.forEach(slot => {
+          slot.addEventListener('click', function() {
+            const time = this.textContent;
+            const slotIndex = selectedSlots.indexOf(time);
+            
+            if (slotIndex > -1) {
+              // Deselect if already selected
+              selectedSlots.splice(slotIndex, 1);
+              this.classList.remove('selected');
+            } else {
+              // Check max limit BEFORE adding
+              if (selectedSlots.length >= 3) {
+                showAlert('Maximum 3 consecutive hours allowed');
+                this.classList.remove('selected'); // ลบ class ที่อาจติดค้าง
+                return; // Exit - don't add slot
+              }
+              
+              // Check if new slot would be consecutive BEFORE adding
+              const tempSlots = [...selectedSlots, time];
+              if (!areConsecutive(tempSlots)) {
+                showAlert('Please select consecutive time slots');
+                this.classList.remove('selected'); // ลบ class ที่อาจติดค้าง
+                return; // Exit - don't add slot
+              }
+              
+              // All validations passed - now add the slot
+              selectedSlots.push(time);
+              this.classList.add('selected');
+            }
+            
+            // Update display (only reached if action was valid)
+            if (selectedSlots.length > 0) {
+              selectionSummary.style.display = 'block';
+              continueBtn.disabled = false;
+              continueBtn.style.opacity = '1';
+              continueBtn.style.cursor = 'pointer';
+              
+              // Sort slots by time
+              const sortedSlots = selectedSlots.sort((a, b) => timeToHour(a) - timeToHour(b));
+              const startTime = sortedSlots[0];
+              const endHour = timeToHour(sortedSlots[sortedSlots.length - 1]) + 1;
+              const endTime = String(endHour).padStart(2, '0') + ':00';
+              const duration = selectedSlots.length + ' hour' + (selectedSlots.length > 1 ? 's' : '');
+              
+              selectedTimeDisplay.textContent = `${startTime} - ${endTime}`;
+              selectedDurationDisplay.textContent = duration;
+            } else {
+              selectionSummary.style.display = 'none';
+              continueBtn.disabled = true;
+              continueBtn.style.opacity = '0.5';
+              continueBtn.style.cursor = 'not-allowed';
+            }
+          });
+        });
+        
+        // Update date display when moving to Step 2
+        const nextStepBtns = document.querySelectorAll('.btn-next-step');
+        nextStepBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Check if this is Step 1 continue button
+            if (this.closest('#step-1')) {
+              // Update Step 2 with selected date from Step 1
+              if (selectedDate) {
+                const dateStr = selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                const dayMonthYear = selectedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                
+                // Update heading
+                document.getElementById('time-slots-heading').textContent = `Available Time Slots for ${dayMonthYear}`;
+                
+                // Update date display in selection summary
+                document.getElementById('selected-date-display').textContent = dateStr;
+              }
+            }
+            
+            // Check if this is Step 2 continue button
+            if (this.closest('#step-2')) {
+              // Update Step 3 with selected date and time from Step 1 & 2
+              if (selectedDate) {
+                const dateStr = selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                document.getElementById('step3-selected-date').textContent = dateStr;
+              }
+              
+              // Update time display in Step 3
+              if (selectedSlots.length > 0) {
+                const sortedSlots = [...selectedSlots].sort((a, b) => timeToHour(a) - timeToHour(b));
+                const startTime = sortedSlots[0];
+                const endHour = timeToHour(sortedSlots[sortedSlots.length - 1]) + 1;
+                const endTime = String(endHour).padStart(2, '0') + ':00';
+                const duration = selectedSlots.length + ' hour' + (selectedSlots.length > 1 ? 's' : '');
+                
+                document.getElementById('step3-selected-time').textContent = `${startTime} - ${endTime} (${duration})`;
+              }
+            }
+            
+            // Check if this is Step 3 continue button (from script.js validation)
+            if (this.closest('#step-3')) {
+              // Update Step 4 with selected date and time from Step 1 & 2
+              if (selectedDate) {
+                const dateStr = selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                const dayName = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
+                document.getElementById('step4-selected-date').textContent = dateStr;
+              }
+              
+              // Update time display in Step 4
+              if (selectedSlots.length > 0) {
+                const sortedSlots = [...selectedSlots].sort((a, b) => timeToHour(a) - timeToHour(b));
+                const dayName = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
+                const startTime = sortedSlots[0];
+                const endHour = timeToHour(sortedSlots[sortedSlots.length - 1]) + 1;
+                const endTime = String(endHour).padStart(2, '0') + ':00';
+                const duration = selectedSlots.length + ' hour' + (selectedSlots.length > 1 ? 's' : '');
+                
+                document.getElementById('step4-selected-time').textContent = `${dayName}, ${startTime} - ${endTime} (${duration})`;
+              }
+
+              // Update Step 4 with form data from Step 3
+              const step3 = document.getElementById('step-3');
+              if (step3) {
+                const inputs = step3.querySelectorAll('input');
+                const selects = step3.querySelectorAll('select');
+                
+                // Update input fields
+                if (inputs[0]) document.getElementById('step4-name').textContent = inputs[0].value || 'Not provided';
+                if (inputs[1]) document.getElementById('step4-student-id').textContent = inputs[1].value || 'Not provided';
+                if (inputs[2]) document.getElementById('step4-email').textContent = inputs[2].value || 'Not provided';
+                if (inputs[3]) document.getElementById('step4-phone').textContent = inputs[3].value || 'Not provided';
+                
+                // Update select fields
+                if (selects[0]) {
+                  const roomTypeText = selects[0].options[selects[0].selectedIndex].text;
+                  document.getElementById('step4-room-type').textContent = roomTypeText || 'Not selected';
+                }
+                if (selects[1]) {
+                  const purposeText = selects[1].options[selects[1].selectedIndex].text;
+                  document.getElementById('step4-purpose').textContent = purposeText || 'Not selected';
+                }
+                if (selects[2]) {
+                  const attendeesText = selects[2].options[selects[2].selectedIndex].text;
+                  document.getElementById('step4-attendees').textContent = attendeesText || 'Not selected';
+                }
+              }
+            }
+            
+            // Check if this is Step 4 continue button -> Step 5
+            if (this.closest('#step-4')) {
+              // Update Step 5 with all booking information
+              if (selectedDate) {
+                const dateStr = selectedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                const dayName = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
+                document.getElementById('step5-date').textContent = `${dayName}, ${dateStr}`;
+              }
+              
+              // Update time display in Step 5
+              if (selectedSlots.length > 0) {
+                const sortedSlots = [...selectedSlots].sort((a, b) => timeToHour(a) - timeToHour(b));
+                const startTime = sortedSlots[0];
+                const endHour = timeToHour(sortedSlots[sortedSlots.length - 1]) + 1;
+                const endTime = String(endHour).padStart(2, '0') + ':00';
+                const duration = selectedSlots.length + ' hour' + (selectedSlots.length > 1 ? 's' : '');
+                
+                document.getElementById('step5-time').textContent = `${startTime} - ${endTime}`;
+                document.getElementById('step5-duration').textContent = duration;
+              }
+              
+              // Generate booking ID
+              const bookingId = 'BK-' + selectedDate.toISOString().substring(0, 10).replace(/-/g, '') + Math.floor(Math.random() * 100).toString().padStart(2, '0');
+              document.getElementById('step5-booking-id').textContent = bookingId;
+              
+              // Trigger confetti effect
+              setTimeout(() => {
+                const container = document.querySelector('.confetti-container');
+                if (container) {
+                  const colors = ['#c4f82a', '#10b981', '#fbbf24', '#ef4444', '#8b5cf6', '#3b82f6'];
+                  const confettiCount = 100;
+
+                  for (let i = 0; i < confettiCount; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti animate';
+                    confetti.style.top = '-20px';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 0.3 + 's';
+                    confetti.style.animationDuration = 2.5 + Math.random() * 1.5 + 's';
+
+                    const size = Math.random() * 8 + 6;
+                    confetti.style.width = size + 'px';
+                    confetti.style.height = size + 'px';
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+
+                    container.appendChild(confetti);
+                  }
+
+                  // Remove confetti after animation
+                  setTimeout(() => {
+                    container.innerHTML = '';
+                  }, 5000);
+                }
+              }, 300);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
